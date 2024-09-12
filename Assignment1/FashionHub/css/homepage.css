@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #cbcbcb;
+    color: rgb(0, 0, 0);
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+   
+}
+
+header {
+    background-image: linear-gradient(rgba(102, 78, 120, 0.7), rgba(117, 92, 142, 0.7));
+    height: 70vh;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: rgb(187, 169, 196);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;}
+
+.main-nav li a:hover {
+    text-decoration: none;
+    color: rgb(7, 8, 7);
+}
+
+.subtext{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.subtext h1{
+    color:rgb(237, 195, 243)
+}
+
+.section .long-copy {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.box {
+    padding: 1%;
+    text-align: center;
+}
+
+
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    background-color: rgb(172, 138, 182);
+    border: 1px solid rgb(20, 20, 24);
+    color:#050405;
+    margin-right: 2%;
+} 
+
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    color: #6d424d;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    text-align: center;
+    color:rgb(54, 37, 53)
+}
+
+
+
+footer {
+    background-color: rgb(115, 148, 175);
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+
+
+.footer-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child {
+    margin-right: 0;
+}
+
+
+.footer-nav li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: rgb(190, 15, 15);
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover {
+    color: rgb(7, 40, 8);
+}
+
+
+footer p {
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+    color: #6a48e5;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.footer{ 
+    width:1300px; 
+    background:#4178cb; 
+    float:left; 
+    padding:20px 0px; 
+    margin-top:50px;
+}
+
+.footer-right{ 
+    width:350px; 
+    float:right; 
+    padding:0px 25px;
+}
+.footer-right-h4{ 
+    color:rgb(66, 49, 75); 
+    padding:10px 0px; 
+    font-size:18px;
+}
+.form{ 
+    width:240px; 
+    border-radius:2px; 
+    padding:8px 10px; 
+    color:#000; 
+    font-size:16px; 
+    margin:10px auto; 
+    border:none; 
+}
+
+.subscribe{ padding:8px 15px; 
+    background:rgb(99, 99, 194); 
+    border-radius:2px; 
+    cursor:pointer; 
+    color:white;
+    font-size:16px; 
+    border:none;
+}
+
+.send
+{   padding:8px 15px; 
+    background:rgb(99, 99, 194); 
+    border-radius:2px; 
+    cursor:pointer; 
+    color:white;
+    font-size:16px; 
+    margin-left:-6px; 
+    border:none;
+}
+
+
+.row {
+    zoom: 1; 
+}
+
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } 
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.span {
+	width: 23.8%; 
+}
+
+.span-1-of-2 {
+	width: 49.2%;
+}
+
+.span-1-of-3 {
+	width: 32.26%; 
+}
+
+.span-2-of-3 {
+	width: 66.13%; 
+}
