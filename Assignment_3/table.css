@@ -1,0 +1,91 @@
+#myTable {
+	border: 2px solid green;
+	border-collapse: collapse;
+	margin: 30px 30px 20px 40px;
+  }
+
+  #myTable img[src="down.png"] {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+  }
+  
+  #myTable td, #myTable th {
+	border: 1px solid green;
+	padding: 5px;
+  }
+  
+  #myTable th {
+	color: #fff;
+	background-color: #a7c942;
+  }
+  
+  #myTable input {
+	margin-left: 5px;
+  }
+  
+  #button {
+	color: #fff;
+	background-color: gray;
+	border-radius: 3px;
+	border: 2px solid gray;
+	margin-left: 180px;
+	padding: 5px 10px;
+	cursor: not-allowed;
+  }
+  
+  #button:enabled {
+	background-color: orange;
+	border-color: orange;
+	cursor: pointer;
+  }
+  
+  #add {
+	color: #fff;
+	background-color: #4CAF50;
+	border-radius: 3px;
+	border: 2px solid #4CAF50;
+	margin-left: 10px;
+	padding: 5px 10px;
+	cursor: pointer;
+  }
+  
+  .deleteBtn, .editBtn {
+	background-color: #f44336;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	margin: 2px 2px;
+	cursor: pointer;
+  }
+  
+  .editBtn {
+	background-color: #008CBA;
+  }
+  
+  .dropDownTextArea {
+	display: none;
+	font-size: 12px;
+  }
+  
+  #editPopup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #f1f1f1;
+	padding: 20px;
+	border: 1px solid #d3d3d3;
+	z-index: 9999;
+  }
+  
+  #nameDisplay {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-align: center;
+  }
