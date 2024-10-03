@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Feedback</title>
+  <style>
+    label { 
+      float: left; 
+      width: 150px; 
+    }
+
+    #container { 
+      width: 700px; 
+      margin: auto; 
+      background-color: beige; 
+    }
+
+    main { 
+      padding: 50px; 
+    }
+
+    .error { 
+      color: red; 
+      display: none; 
+    }
+
+    .hidden { 
+      display: none; 
+    }
+
+    table { 
+      border-collapse: collapse; 
+      margin-top: 20px; 
+      width: 100%; 
+    }
+
+    table, th, td { 
+      border: 1px solid black; 
+      padding: 10px; 
+    }
+
+    input[type="text"], input[type="email"], textarea, select {
+      width: 250px; padding: 5px;
+    }
+
+    input[type="checkbox"], input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <main>
+      <h2>Feedback</h2>
+      <h3>Love something? Hate something? Let us know!</h3>
+      Note: Fields marked with an asterisk (*) are mandatory.
+      <br><br>
+      <form id="feedbackForm" method="post" novalidate>
+        <label>Title*:</label>
+        <input type="radio" name="title" id="miss" value="Miss" required />Miss
+        <input type="radio" name="title" id="mr" value="Mr" required />Mr.
+        <input type="radio" name="title" id="mrs" value="Mrs" required />Mrs.
+        <br><br>
+
+        <label for="firstName">First Name*:</label>
+        <input type="text" name="firstName" id="firstName" placeholder="First Name" required />
+        <span id="firstNameError" class="error"></span>
+        <br><br>
+
+        <label for="lastName">Last Name*:</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required />
+        <span id="lastNameError" class="error"></span>
+        <br><br>
+
+        <label for="emailId">Email Id*:</label>
+        <input type="email" name="emailId" id="emailId" placeholder="yourname@northeastern.edu" required />
+        <span id="emailIdError" class="error"></span>
+        <br><br>
+
+        <label for="phoneNumber">Phone Number*:</label>
+        <input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" required />
+        <span id="phoneNumberError" class="error"></span>
+        <br><br>
+
+        <label for="address">Street Address 1*:</label>
+        <input type="text" name="address" id="address" placeholder="address" required />
+        <span id="addressError" class="error"></span>
+        <br><br>
+
+        <label for="streetAddress2">Street Address 2:</label>
+        <input type="text" id="streetAddress2" name="streetAddress2" placeholder="address">
+        <br><br>
+
+        <label for="city">City*:</label>
+        <input type="text" name="city" id="city" placeholder="city" required />
+        <span id="cityError" class="error"></span>
+        <br><br>
+
+        <label for="state">State*:</label>
+        <input type="text" name="state" id="state" placeholder="state" required />
+        <span id="stateError" class="error"></span>
+        <br><br>
+
+        <label for="zipcode">ZipCode*:</label>
+        <input type="text" name="zipcode" id="zipcode" placeholder="xxxxx" required />
+        <span id="zipcodeError" class="error"></span>
+        <br><br>
+
+        <label for="howDidYouHear">How did you hear*:</label>
+        <input type="checkbox" name="howDidYouHear" value="facebook" />Facebook
+        <input type="checkbox" name="howDidYouHear" value="google" />Google
+        <input type="checkbox" name="howDidYouHear" value="yelp" />Yelp
+        <br><br>
+
+       <label for="drink">Drink*:</label>
+       <select id="drink" name="drink" required>
+       <option value="">--Select--</option>
+       <option value="Cappuccino">Cappuccino</option>
+       <option value="Latte">Latte</option>
+       <option value="Espresso">Espresso</option>
+       <option value="Americano">Americano</option>
+       <option value="Mocha">Mocha</option>
+       </select>
+       <br><br>
+
+       <div id="drinkOptions" class="hidden">
+       <input type="checkbox" id="largeSize" name="largeSize" value="Large"/>
+       <label for="largeSize" id="largeSizeLabel"></label>
+       <br><br>
+
+       <label for="customizations" id="customizationsLabel" class="hidden">Any additional customizations*:</label>
+       <textarea id="customizations" name="customizations" placeholder="Your customisations, write N/A if none"></textarea>
+       <br><br>
+       <span id="customizationsError" class="error">Please write customizations or N/A if none</span>
+       <br><br>
+       </div>
+
+       <label for="comments">Comments*:</label>
+       <textarea id="comments" name="comments" placeholder="Your comments" required></textarea>
+       <span id="commentsError" class="error"></span>
+       <br><br>
+       
+       <input type="submit" id="submitButton" value="Submit" />
+       <input type="reset" value="Reset"/>
+      </form>
+
+      
+      <div id="resultTableContainer" class="hidden">
+        <h3>Submitted Information:</h3>
+        <table id="resultTable">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Zip Code</th>
+              <th>Drink</th>
+              <th>Customizations</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
