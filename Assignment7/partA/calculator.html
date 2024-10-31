@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/
+	4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/
+	jquery/3.3.1/jquery.min.js">
+	</script>
+
+    <title>Form</title>
+    <style>
+      label {
+        float: left;
+        width: 150px;
+      }
+      #container {
+        width: 700px;
+        margin: auto;
+        background-color: rgb(162, 217, 249);
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      main {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    
+  </head>
+  
+  <body>
+    <div id="container">
+        <div class="uName">
+            <h1 style="padding-bottom: 2%;">Hi <span id="userdisp"></span></h1>
+            <h3>Enter the numbers below:</h3>
+        </div>
+
+        <form id="calculatorForm">
+            <label for="input1" class="form-label">1st Number:</label>
+            <input type="text" name="input1" id="input1" class="form-control" placeholder="1st Number" required/>
+            <h6 id="number1Error" style="color: red;">Input should be a number</h6>
+            <br/>
+
+            <label for="input2" class="form-label">2nd Number:</label>
+            <input type="text" name="input2" id="input2" class="form-control" placeholder="2nd Number" required/>
+            <h6 id="number2Error" style="color: red;">Input should be a number</h6>
+            <br/>
+
+            <label for="output" class="form-label">Output:</label>
+            <input type="text" name="output" id="output" class="form-control" placeholder="Result" disabled/>
+            <br/>
+
+            <div>
+                <input type="button" class="btn btn-primary" id="add" value="Add"/>
+                <input type="button" class="btn btn-success" id="subtract" value="Subtract"/>
+                <input type="button" class="btn btn-warning" id="multiply" value="Multiply"/>
+                <input type="button" class="btn btn-info" id="divide" value="Divide"/>
+                <input type="button" class="btn btn-danger" id="reset" value="Reset"/>
+            </div>
+        </form>
+    </div>
+
+    <script src="calculator.js"></script>
+    <script>
+        $(document).ready(() => {
+            const user = sessionStorage.getItem("user");
+            $("#userdisp").text(user);
+        });
+    </script>
+</body>
+</html>
